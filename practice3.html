@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="box">마우스를 올려보세요.</p>
+
+    <script>
+        const box = document.querySelector("#box");
+        
+        function changeColor(color) {
+            box.style.color = color;
+        }
+
+        // 이벤트 리스너를 등록할 때, 함수 정의를 동시에 할 수 있다.
+        box.addEventListener("mouseover",  () => changeColor("orange"));
+        box.addEventListener("mouseout", () => changeColor("black"));
+
+        // 결론
+        // '() => {}' -> 함수
+        // addEventListener(이벤트, 함수)를 호출 할 때, 두번쩨 인자는 반드시 함수여야 한다.
+    </script>
+
+</body>
+
+</html>
